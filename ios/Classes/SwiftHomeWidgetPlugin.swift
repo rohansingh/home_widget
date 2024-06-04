@@ -119,7 +119,7 @@ public class SwiftHomeWidgetPlugin: NSObject, FlutterPlugin, FlutterStreamHandle
       if let myArgs = args as? [String: Any?],
         let name = (myArgs["ios"] ?? myArgs["name"]) as? String
       {
-        if #available(iOS 14.0, *) {
+        if #available(iOS 16.0, *) {
           #if arch(arm64) || arch(i386) || arch(x86_64)
             WidgetCenter.shared.reloadTimelines(ofKind: name)
             WidgetCenter.shared.reloadAllTimelines()
